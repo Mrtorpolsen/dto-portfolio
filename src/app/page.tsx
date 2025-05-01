@@ -4,12 +4,12 @@ import NavBar from "./navbar";
 
 export default function Home() {
   return (
-    <div className="h-screen">
+    <div className="">
       <Canva />
-      <div className="max-w-5xl size-full mx-auto relative z-1">
-        <Intro />
-        <NavBar />
-      </div>
+      <Intro />
+      <NavBar />
+      <div className="h-screen"></div>
+      <div className="h-screen"></div>
     </div>
   );
 }

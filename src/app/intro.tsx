@@ -1,7 +1,11 @@
+"use client";
 export default function Intro() {
   return (
-    <div className="grid grid-rows-3 justify-center items-center size-full px-8 text-center">
-      <div className="row-start-2">
+    <div
+      id="intro"
+      className="grid grid-rows-3 justify-center items-center px-8 text-center h-screen"
+    >
+      <div className="row-start-2 z-10">
         <div className="text-5xl">Hello there!</div>
         <div className="text-3xl">
           My name is Daniel, im a web developer and this is my work.
@@ -26,6 +30,10 @@ export default function Intro() {
       <path id="XMLID_30_" d="M154.394,325.606C157.322,328.535,161.161,330,165,330s7.678-1.465,10.607-4.394l75-75  c5.858-5.857,5.858-15.355,0-21.213c-5.858-5.857-15.356-5.857-21.213,0L180,278.787V15c0-8.284-6.716-15-15-15  c-8.284,0-15,6.716-15,15v263.787l-49.394-49.394c-5.858-5.857-15.355-5.857-21.213,0c-5.858,5.857-5.858,15.355,0,21.213  L154.394,325.606z"/>
       </svg> */}
       <svg
+        onClick={() => {
+          const element = document.getElementById("nav");
+          element?.scrollIntoView({ behavior: "smooth" });
+        }}
         className="row-start-3 self-end justify-self-center animate-bounce"
         xmlns="http://www.w3.org/2000/svg"
         fill="#000000"
