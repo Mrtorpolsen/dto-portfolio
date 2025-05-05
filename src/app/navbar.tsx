@@ -8,16 +8,26 @@ export default function NavBar() {
     >
       <div
         className={`${
-          useIsActive("intro") ? "text-red-400" : "text-white"
+          useIsActive("home") ? "text-red-400" : "text-white"
         } h-4 mx-3 font-semibold`}
         onClick={() => {
-          const element = document.getElementById("intro");
+          const element = document.getElementById("home");
           element?.scrollIntoView({ behavior: "smooth" });
         }}
       >
         Home
       </div>
-      <div className="h-4 text-white mx-3 font-semibold">About</div>
+      <div
+        className={`${
+          useIsActive("about") ? "text-red-400" : "text-white"
+        } h-4 mx-3 font-semibold`}
+        onClick={() => {
+          const element = document.getElementById("about");
+          element?.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        About
+      </div>
       <div className="h-4 text-white mx-3 font-semibold">Project</div>
       <div className="h-4 text-white mx-3 font-semibold">Contact</div>
     </div>

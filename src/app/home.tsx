@@ -1,8 +1,8 @@
 "use client";
-export default function Intro() {
+export default function Home() {
   return (
     <div
-      id="intro"
+      id="home"
       className="grid grid-rows-3 justify-center items-center px-8 text-center h-screen"
     >
       <div className="row-start-2 z-10">
