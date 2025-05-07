@@ -2,9 +2,9 @@
 import { useState, useRef, useEffect } from "react";
 export default function NavBar() {
   return (
-    <div
+    <nav
       id="nav"
-      className="flex flex-row sticky top-0 justify-center w-full h-fit bg-black py-3 overflow-a z-1 leading-none"
+      className="flex flex-row sticky top-0 justify-center w-full h-fit bg-black py-3 z-5 leading-none"
     >
       <div
         className={`${
@@ -30,7 +30,7 @@ export default function NavBar() {
       </div>
       <div className="h-4 text-white mx-3 font-semibold">Project</div>
       <div className="h-4 text-white mx-3 font-semibold">Contact</div>
-    </div>
+    </nav>
   );
 }
 function useIsActive(id: string) {

@@ -5,11 +5,13 @@ import About from "./about";
 
 export default function App() {
   return (
-    <div className="">
+    <div className="flex flex-col items-center">
       <Canva />
-      <Home />
-      <NavBar />
-      <About />
+      <div className="max-w-5xl">
+        <Home />
+        <NavBar />
+        <About />
+      </div>
       <div className="h-screen"></div>
       <div className="h-screen"></div>
     </div>
