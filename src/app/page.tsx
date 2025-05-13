@@ -11,9 +11,9 @@ export default function App() {
         <Home />
         <NavBar />
         <About />
+        <div className="h-screen"></div>
+        <div className="h-screen"></div>
       </div>
-      <div className="h-screen"></div>
-      <div className="h-screen"></div>
     </div>
   );
 }
