@@ -1,7 +1,7 @@
-import Home from "./home";
-import Canva from "./canva";
-import NavBar from "./navbar";
-import About from "./about";
+import Home from "../components/home";
+import Canva from "../components/canva";
+import NavBar from "../components/navbar";
+import About from "../components/about";
 
 export default function App() {
   return (

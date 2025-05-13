@@ -6,30 +6,34 @@ export default function NavBar() {
       id="nav"
       className="flex flex-row sticky top-0 justify-center w-full h-fit bg-black py-3 z-5 leading-none"
     >
-      <div
+      <button
         className={`${
           useIsActive("home") ? "text-red-400" : "text-white"
-        } h-4 mx-3 font-semibold`}
+        } h-4 mx-3 font-semibold cursor-pointer`}
         onClick={() => {
           const element = document.getElementById("home");
           element?.scrollIntoView({ behavior: "smooth" });
         }}
       >
         Home
-      </div>
-      <div
+      </button>
+      <button
         className={`${
           useIsActive("about") ? "text-red-400" : "text-white"
-        } h-4 mx-3 font-semibold`}
+        } h-4 mx-3 font-semibold cursor-pointer`}
         onClick={() => {
           const element = document.getElementById("about");
           element?.scrollIntoView({ behavior: "smooth" });
         }}
       >
         About
-      </div>
-      <div className="h-4 text-white mx-3 font-semibold">Project</div>
-      <div className="h-4 text-white mx-3 font-semibold">Contact</div>
+      </button>
+      <button className="h-4 text-white mx-3 font-semibold cursor-pointer">
+        Project
+      </button>
+      <button className="h-4 text-white mx-3 font-semibold cursor-pointer">
+        Contact
+      </button>
     </nav>
   );
 }
