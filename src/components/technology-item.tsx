@@ -6,7 +6,7 @@ type TechnologyItemProps = {
 
 export default function TechnologyItem({ children }: TechnologyItemProps) {
   return (
-    <div className="border-4 rounded-sm relative z-1 size-fit flex flex-col items-center h-18 w-23">
+    <div className="border-2 rounded-xl relative z-1 size-fit flex flex-col items-center h-18 w-23 gap-1 pt-1">
       {children}
     </div>
   );
