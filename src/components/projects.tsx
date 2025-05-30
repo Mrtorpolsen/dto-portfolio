@@ -16,9 +16,9 @@ export default function Projects() {
 
   const listImages = projects.map((project) => (
     <li key={project.src}>
-      <div className="">
+      <div className="sm:grid sm:grid-cols-[60%_40%]">
         <img src={project.src} alt={project.alt} />
-        <div className="mx-8 bg-white/80 p-3 relative -mt-6">
+        <div className="mx-8 bg-white/80 p-3 relative -mt-6 sm:mt-0 sm:p-0 sm:bg-white/0">
           <h2 className="text-xl font-bold text-center mb-2">
             {project.heading}
           </h2>
