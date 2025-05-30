@@ -39,7 +39,15 @@ export default function NavBar() {
       >
         Project
       </button>
-      <button className="h-4 text-white mx-3 font-semibold cursor-pointer">
+      <button
+        className={`${
+          useIsActive("contact") ? "text-red-400" : "text-white"
+        } h-4 mx-3 font-semibold cursor-pointer`}
+        onClick={() => {
+          const element = document.getElementById("contact");
+          element?.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
         Contact
       </button>
     </nav>
