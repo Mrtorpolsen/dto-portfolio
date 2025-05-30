@@ -28,7 +28,15 @@ export default function NavBar() {
       >
         About
       </button>
-      <button className="h-4 text-white mx-3 font-semibold cursor-pointer">
+      <button
+        className={`${
+          useIsActive("projects") ? "text-red-400" : "text-white"
+        } h-4 mx-3 font-semibold cursor-pointer`}
+        onClick={() => {
+          const element = document.getElementById("projects");
+          element?.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
         Project
       </button>
       <button className="h-4 text-white mx-3 font-semibold cursor-pointer">
