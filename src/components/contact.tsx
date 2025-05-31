@@ -27,7 +27,7 @@ export default function Contact() {
             className="bg-gray-100/80 border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md p-2 h-30 resize-none"
             placeholder="Message"
           />
-          <button className="bg-gray-100/80 border border-gray-300 rounded-md w-fit px-5 py-1 self-end">
+          <button className="bg-gray-100/80 border border-gray-300 rounded-md w-fit px-5 py-1 self-end cursor-pointer">
             Submit
           </button>
         </form>
