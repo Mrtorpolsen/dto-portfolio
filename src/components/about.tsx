@@ -13,7 +13,7 @@ export default function About() {
               impedit ab.
             </p>
           </div>
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-between w-[clamp(311px,100%,360px)] self-center md:gap-5">
             <div className="flex flex-col justify-center gap-3">
               <TechnologyItem>
                 <>
