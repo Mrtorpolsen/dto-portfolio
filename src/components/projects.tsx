@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Projects() {
   const projects = [
     {
@@ -21,7 +23,7 @@ export default function Projects() {
           index % 2 === 0 ? "sm:grid-cols-[60%_40%]" : "sm:grid-cols-[40%_60%]"
         }`}
       >
-        <img
+        <Image
           className={`${
             index % 2 === 0
               ? "col-start-1 row-start-1"
