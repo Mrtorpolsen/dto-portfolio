@@ -1,10 +1,10 @@
 import TechnologyItem from "./technology-item";
 export default function About() {
   return (
-    <section className="h-screen relative z-1 px-8" id="about">
-      <div className="flex flex-col justify-center gap-10 mt-10">
+    <section className="relative z-1 px-8 my-24" id="about">
+      <div className="flex flex-col justify-center gap-10">
         <h2 className="self-center text-3xl font-bold">About</h2>
-        <div className="flex flex-col md:flex-row justify-center gap-8">
+        <div className="flex flex-col md:flex-row justify-center gap-16">
           <div>
             <p className="text-black">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
@@ -18,8 +18,7 @@ export default function About() {
               <TechnologyItem>
                 <>
                   <svg
-                    width="40"
-                    height="40"
+                    className="w-full h-full"
                     viewBox="-10.5 -9.45 21 18.9"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -39,16 +38,15 @@ export default function About() {
                       ></ellipse>
                     </g>
                   </svg>
-                  <div className="leading-none text-sm">React</div>
+                  <div className="leading-none text-sm lg:text-lg">React</div>
                 </>
               </TechnologyItem>
 
               <TechnologyItem>
                 <>
                   <svg
+                    className="w-full h-full"
                     viewBox="0 0 128 128"
-                    width="40"
-                    height="40"
                     data-v-107e4060=""
                   >
                     <path
@@ -62,17 +60,16 @@ export default function About() {
                       data-v-107e4060=""
                     ></path>
                   </svg>
-                  <div className="leading-none text-sm">Vue 3</div>
+                  <div className="leading-none text-sm lg:text-lg">Vue 3</div>
                 </>
               </TechnologyItem>
               <TechnologyItem>
                 <>
                   <svg
+                    className="w-full h-full"
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="40"
-                    height="40"
                     viewBox="0 0 48 48"
                   >
                     <path
@@ -92,7 +89,7 @@ export default function About() {
                       d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"
                     ></path>
                   </svg>
-                  <div className="leading-none text-sm">HTML 5</div>
+                  <div className="leading-none text-sm lg:text-lg">HTML 5</div>
                 </>
               </TechnologyItem>
             </div>
@@ -100,11 +97,10 @@ export default function About() {
               <TechnologyItem>
                 <>
                   <svg
+                    className="w-full h-full"
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="40"
-                    height="40"
                     viewBox="0 0 48 48"
                   >
                     <path
@@ -124,17 +120,16 @@ export default function About() {
                       d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"
                     ></path>
                   </svg>
-                  <div className="leading-none text-sm">CSS</div>
+                  <div className="leading-none text-sm lg:text-lg">CSS</div>
                 </>
               </TechnologyItem>
               <TechnologyItem>
                 <>
                   <svg
+                    className="w-full h-full"
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="40"
-                    height="40"
                     viewBox="0 0 48 48"
                   >
                     <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
@@ -143,7 +138,9 @@ export default function About() {
                       d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z"
                     ></path>
                   </svg>
-                  <div className="leading-none text-sm">JavaScript</div>
+                  <div className="leading-none text-sm lg:text-lg">
+                    JavaScript
+                  </div>
                 </>
               </TechnologyItem>
             </div>
@@ -151,11 +148,10 @@ export default function About() {
               <TechnologyItem>
                 <>
                   <svg
+                    className="w-full h-full"
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="40"
-                    height="40"
                     viewBox="0 0 48 48"
                   >
                     <rect
@@ -174,17 +170,18 @@ export default function About() {
                       d="M39.194,26.084c0,0-1.787-1.192-3.807-1.192s-2.747,0.96-2.747,1.986 c0,2.648,7.381,2.383,7.381,7.712c0,8.209-11.254,4.568-11.254,4.568V35.22c0,0,2.152,1.622,4.733,1.622s2.483-1.688,2.483-1.92 c0-2.449-7.315-2.449-7.315-7.878c0-7.381,10.658-4.469,10.658-4.469L39.194,26.084z"
                     ></path>
                   </svg>
-                  <div className="leading-none text-sm">Typescript</div>
+                  <div className="leading-none text-sm lg:text-lg">
+                    Typescript
+                  </div>
                 </>
               </TechnologyItem>
               <TechnologyItem>
                 <>
                   <svg
+                    className="w-full h-full"
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="40"
-                    height="40"
                     viewBox="0 0 48 48"
                   >
                     <path
@@ -192,17 +189,16 @@ export default function About() {
                       d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z"
                     ></path>
                   </svg>
-                  <div className="leading-none text-sm">Git</div>
+                  <div className="leading-none text-sm lg:text-lg">Git</div>
                 </>
               </TechnologyItem>
               <TechnologyItem>
                 <>
                   <svg
+                    className="w-full h-full"
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="40"
-                    height="40"
                     viewBox="0 0 48 48"
                   >
                     <path
@@ -210,7 +206,9 @@ export default function About() {
                       d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"
                     ></path>
                   </svg>
-                  <div className="leading-none text-sm">Tailwind</div>
+                  <div className="leading-none text-sm lg:text-lg">
+                    Tailwind
+                  </div>
                 </>
               </TechnologyItem>
             </div>

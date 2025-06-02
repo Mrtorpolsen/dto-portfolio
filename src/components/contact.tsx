@@ -6,7 +6,7 @@ export default function Contact() {
 
   return (
     <section
-      className="h-screen relative z-1 px-8 flex justify-center"
+      className="relative z-1 px-8 flex justify-center my-24"
       id="contact"
     >
       <div className="max-w-lg">
