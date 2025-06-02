@@ -29,6 +29,7 @@ export default function NavBar() {
 }
 function useActiveSection(ids: string[]) {
   const [activeId, setActiveId] = useState<string | null>(null);
+  const debounceTimeout = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,10 +39,16 @@ function useActiveSection(ids: string[]) {
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
 
         if (visibleSections.length > 0) {
-          setActiveId(visibleSections[0].target.id);
+          const mostVisibleId = visibleSections[0].target.id;
+
+          if (debounceTimeout.current) clearTimeout(debounceTimeout.current);
+
+          debounceTimeout.current = setTimeout(() => {
+            setActiveId(mostVisibleId);
+          }, 100);
         }
       },
-      { threshold: 0.51 }
+      { threshold: [0.51] }
     );
 
     ids.forEach((id) => {
@@ -51,6 +58,7 @@ function useActiveSection(ids: string[]) {
 
     return () => {
       observer.disconnect();
+      if (debounceTimeout.current) clearTimeout(debounceTimeout.current);
     };
   }, [ids]);
 
