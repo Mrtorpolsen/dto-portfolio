@@ -12,12 +12,14 @@ export default function App() {
       <Canva />
       <div className="max-w-5xl">
         <Home />
-        <NavBar />
+      </div>
+      <NavBar />
+      <div className="max-w-5xl">
         <About />
         <Projects />
         <Contact />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

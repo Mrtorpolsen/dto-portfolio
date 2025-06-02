@@ -5,7 +5,8 @@ export default function About() {
       <div className="flex flex-col justify-center gap-10">
         <h2 className="self-center text-3xl font-bold">About</h2>
         <div className="flex flex-col md:flex-row justify-center gap-16">
-          <div>
+          <div className="flex flex-col self-center">
+            <h3 className="text-xl font-bold mb-2">Whats important to me?</h3>
             <p className="text-black">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
               totam, velit et ullam mollitia non laboriosam ab dolorem, quidem

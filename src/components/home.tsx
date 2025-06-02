@@ -6,7 +6,7 @@ export default function Home() {
       className="grid grid-rows-3 justify-center items-center px-8 text-center h-screen"
     >
       <div className="row-start-2 z-10">
-        <div className="text-5xl">Hello there!</div>
+        <div className="text-5xl mb-2">Hello there!</div>
         <div className="text-3xl">
           My name is Daniel, im a web developer and this is my work.
         </div>

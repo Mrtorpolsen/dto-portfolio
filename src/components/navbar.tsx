@@ -48,7 +48,7 @@ function useActiveSection(ids: string[]) {
           }, 100);
         }
       },
-      { threshold: [0.51] }
+      { threshold: 0.51 }
     );
 
     ids.forEach((id) => {

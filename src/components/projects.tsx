@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Projects() {
   const projects = [
     {
@@ -33,7 +31,7 @@ export default function Projects() {
           alt={project.alt}
         />
         <div
-          className={` mx-8 bg-white/80 p-3 relative -mt-6 sm:mt-0 sm:p-0 sm:bg-white/0${
+          className={`mx-8 bg-white/80 p-3 relative -mt-6 md:self-center sm:mt-0 sm:p-0 sm:bg-white/0${
             index % 2 === 0
               ? "col-start-1 row-start-1"
               : "col-start-2 row-start-1"
@@ -52,7 +50,7 @@ export default function Projects() {
       <div className="flex w-full justify-center">
         <h2 className="text-3xl my-10 font-bold">Projects</h2>
       </div>
-      <ul className="flex flex-col gap-8">{listImages}</ul>
+      <ul className="flex flex-col gap-12">{listImages}</ul>
     </section>
   );
 }
