@@ -23,7 +23,7 @@ export default function Projects() {
           index % 2 === 0 ? "sm:grid-cols-[60%_40%]" : "sm:grid-cols-[40%_60%]"
         }`}
       >
-        <Image
+        <img
           className={`${
             index % 2 === 0
               ? "col-start-1 row-start-1"
