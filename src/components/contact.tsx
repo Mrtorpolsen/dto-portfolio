@@ -1,6 +1,6 @@
 "use client";
 import { useForm, ValidationError } from "@formspree/react";
-/* manjwgka */
+
 export default function Contact() {
   const [state, handleSubmit] = useForm("manjwgka");
 

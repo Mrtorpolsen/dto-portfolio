@@ -6,12 +6,15 @@ export default function About() {
         <h2 className="self-center text-3xl font-bold">About</h2>
         <div className="flex flex-col md:flex-row justify-center gap-16">
           <div className="flex flex-col self-center">
-            <h3 className="text-xl font-bold mb-2">Whats important to me?</h3>
+            <h3 className="text-xl font-bold mb-2">What is important to me?</h3>
             <p className="text-black">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-              totam, velit et ullam mollitia non laboriosam ab dolorem, quidem
-              neque consectetur. Iste, illo quidem! Dolores porro quos dolor
-              impedit ab.
+              When I am working and I am crunching away at a problem, I love the
+              feeling when you get the realization of how the problem should be
+              handled and you turn that into some of the best most concies code
+              you've ever made. Just for you to look at it 6 months later and go
+              "why didn't I just do it like this instead, thats so much easier
+              and more efficient! Typical past me". The constant progress, thats
+              what's important to me.
             </p>
           </div>
           <div className="flex flex-row justify-between w-[clamp(311px,100%,360px)] self-center md:gap-5">
