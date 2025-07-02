@@ -6,9 +6,9 @@ export default function About() {
         <h2 className="self-center text-3xl font-bold">About</h2>
         <div className="flex flex-col md:flex-row justify-center gap-16">
           <div className="flex flex-col self-center">
-            <h3 className="text-xl font-bold mb-2">What is important to me?</h3>
+            <h3 className="text-xl font-bold mb-2">What's important to me?</h3>
             <p className="text-black">
-              When I am working and I am crunching away at a problem, I love the
+              When I'm working and I'm crunching away at a problem, I love the
               feeling when you get the realization of how the problem should be
               handled and you turn that into some of the best most concies code
               you've ever made. Just for you to look at it 6 months later and go

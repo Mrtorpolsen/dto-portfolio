@@ -1,13 +1,13 @@
 export default function Projects() {
   const projects = [
     {
-      src: "/images/scraper_portfolio.PNG",
+      src: "/images/scraper.PNG",
       alt: "Swing-Scraper image",
       heading: "Swing-Scraper",
       text: "A webscraper built with crawlees cheerio crawler, TS, using ExcelJS to write results to excel. So far it scrapes 3 playground companies for all of their products, formats, verifies and categories the results, before it saves it to excel. Current plan is to couple it up with Microsoft Fabric Warehouse.",
     },
     {
-      src: "/images/portfolio2.PNG",
+      src: "/images/portfolio.PNG",
       alt: "Portfolio image",
       heading: "My Portfolio",
       text: "This portfolio, is built from the ground using Next.js, React, TS and Tailwind. At the moment formspree is handling the contact form, but I have plans to implement it using next server actions down the line.",
@@ -22,7 +22,7 @@ export default function Projects() {
         }`}
       >
         <img
-          className={`${
+          className={`max-h-[280px] self-center justify-self-center ${
             index % 2 === 0
               ? "col-start-1 row-start-1"
               : "col-start-2 row-start-1"
