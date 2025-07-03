@@ -4,7 +4,7 @@ export default function Projects() {
       src: "/images/scraper.PNG",
       alt: "Swing-Scraper image",
       heading: "Swing-Scraper",
-      text: "A webscraper built with crawlees cheerio crawler, TS, using ExcelJS to write results to excel. So far it scrapes 3 playground companies for all of their products, formats, verifies and categories the results, before it saves it to excel. Current plan is to couple it up with Microsoft Fabric Warehouse.",
+      text: "A webscraper built with crawlees cheerio crawler, TS, using ExcelJS to write results to excel. So far it scrapes 3 playground companies for all of their products, formats, verifies and categories the results, before it saves it to excel. Current plan is to couple it up with Microsoft Fabric Warehouse and later on automate it and serve it through AWS' Lambda.",
     },
     {
       src: "/images/portfolio.PNG",
