@@ -13,7 +13,7 @@ export default function Home() {
       </div>
       <svg
         onClick={() => {
-          const element = document.getElementById("nav");
+          const element = document.getElementById("about");
           element?.scrollIntoView({ behavior: "smooth" });
         }}
         className="row-start-3 self-end justify-self-center animate-bounce"

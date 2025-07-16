@@ -1,7 +1,10 @@
 import TechnologyItem from "./technology-item";
 export default function About() {
   return (
-    <section className="relative z-1 px-8 my-24" id="about">
+    <section
+      className="relative z-1 px-8 mt-24 mb-40 scroll-mt-[41px]"
+      id="about"
+    >
       <div className="flex flex-col justify-center gap-10">
         <h2 className="self-center text-3xl font-bold">About</h2>
         <div className="flex flex-col md:flex-row justify-center gap-16">

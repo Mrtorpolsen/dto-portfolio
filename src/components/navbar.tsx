@@ -18,7 +18,9 @@ export default function NavBar() {
             activeId === id ? "text-red-400" : "text-black"
           } h-4 mx-3 font-semibold cursor-pointer`}
           onClick={() => {
-            document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+            document
+              .getElementById(id)
+              ?.scrollIntoView({ behavior: "smooth", block: "start" });
           }}
         >
           {id.charAt(0).toUpperCase() + id.slice(1)}

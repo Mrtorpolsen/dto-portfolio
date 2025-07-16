@@ -46,7 +46,7 @@ export default function Projects() {
     </li>
   ));
   return (
-    <section className="relative z-1" id="projects">
+    <section className="relative mt-24 mb-40 z-1" id="projects">
       <div className="flex w-full justify-center">
         <h2 className="text-3xl my-10 font-bold">Projects</h2>
       </div>
