@@ -23,7 +23,3 @@ Rather than treating the portfolio as a purely static presentation, I wanted the
 * Reusable React components
 * Type-safe development with TypeScript
 * Responsive layouts for desktop and mobile
-
-## Project Structure
-
-The project is organized around reusable components and separate responsibilities, with the aim of keeping the codebase easy to extend and maintain.
