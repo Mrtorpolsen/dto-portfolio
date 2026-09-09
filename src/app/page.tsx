@@ -2,7 +2,7 @@ import Home from "../components/home";
 import Canva from "../components/canva";
 import NavBar from "../components/navbar";
 import About from "../components/about";
-import Projects from "../components/projects";
+import Projects from "../components/projects/projects";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
 
