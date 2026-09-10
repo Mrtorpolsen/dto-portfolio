@@ -1,6 +1,7 @@
-export type ProjectData = {
-    src: string,
-    alt: string,
-    heading: string,
-    text: string
+export type ContentData = {
+    src: string;
+    alt: string;
+    heading: string;
+    text: string;
+    imageSize?: "standard" | "tall";
 }
