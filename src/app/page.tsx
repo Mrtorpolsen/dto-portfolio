@@ -10,11 +10,11 @@ export default function App() {
   return (
     <div className="flex flex-col items-center">
       <Canva />
-      <div className="max-w-5xl">
+      <div className="w-full max-w-5xl">
         <Home />
       </div>
       <NavBar />
-      <div className="max-w-5xl">
+      <div className="w-full max-w-5xl">
         <About />
         <Projects />
         <Contact />
