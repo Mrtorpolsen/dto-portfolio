@@ -1,4 +1,5 @@
 import type { ContentData } from "./type";
+import TextWrapper from "../text-wrapper";
 
 type Props = {
   data: ContentData;
@@ -8,7 +9,7 @@ type Props = {
 export default function SideBySide({ data, index }: Props) {
   const imageClass =
     data.imageSize === "tall"
-      ? "max-h-[280px] sm:max-h-[550px]"
+      ? "max-h-[280px] md:max-h-[550px]"
       : "max-h-[280px]";
 
   const gridColumns =
@@ -23,7 +24,7 @@ export default function SideBySide({ data, index }: Props) {
         }`}
       >
         <div
-          className={`bg-[#1E1E1E]/70 rounded-lg p-8 ${
+          className={`bg-[#1E1E1E]/70 rounded-lg p-8 sm:mx-0 content-center ${
             index % 2 === 0
               ? "col-start-1 row-start-1"
               : "col-start-2 row-start-1"
@@ -36,14 +37,18 @@ export default function SideBySide({ data, index }: Props) {
           />
         </div>
         <div
-          className={`mx-8 bg-white/80 p-3 relative -mt-6 md:self-center sm:mt-0 sm:p-0 sm:bg-white/0${
+          className={`p-3 relative mt-6 md:self-center sm:mt-0 sm:p-0${
             index % 2 === 0
-              ? "col-start-1 row-start-1"
-              : "col-start-2 row-start-1"
+              ? "col-start-1 row-start-1 sm:ml-4 ml-0"
+              : "col-start-2 row-start-1 sm:mr-4 mr-0"
           }`}
         >
-          <h2 className="text-xl font-bold text-center mb-2">{data.heading}</h2>
-          <p className="whitespace-pre-line">{data.text}</p>
+          <TextWrapper>
+            <>
+              <h2 className="text-xl font-bold text-center mb-2">{data.heading}</h2>
+              <p className="whitespace-pre-line">{data.text}</p>
+            </>
+          </TextWrapper>
         </div>
       </div>
     </li>

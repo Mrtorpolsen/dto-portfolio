@@ -1,4 +1,6 @@
 import TechnologyItem from "./technology-item";
+import TextWrapper from "./text-wrapper";
+
 export default function About() {
   return (
     <section
@@ -9,21 +11,25 @@ export default function About() {
         <h2 className="self-center text-3xl font-bold">About</h2>
         <div className="flex flex-col md:flex-row justify-center gap-16">
           <div className="flex flex-col self-center">
-            <h3 className="text-xl font-bold mb-2 self-center">
-              What&apos;s important to me?
-            </h3>
-            <p className="text-black">
-              When I&apos;m working and I&apos;m crunching away at a problem, I
-              love the feeling when you get the realization of how the problem
-              should be handled and you turn that into some of the best most
-              concies code you&apos;ve ever made. Just for you to look at it 6
-              months later and go &quot;why didn&apos;t I just do it like this
-              instead, that&apos;s so much easier and more efficient! Typical
-              past me&quot;. The constant progress, that&apos;s what&apos;s
-              important to me.
-            </p>
+            <TextWrapper>
+              <>
+                <h3 className="text-xl font-bold mb-2 self-center text-center">
+                  What&apos;s important to me?
+                </h3>
+                <p className="text-black">
+                  When I&apos;m working and I&apos;m crunching away at a
+                  problem, I love the feeling when you get the realization of
+                  how the problem should be handled and you turn that into some
+                  of the best most concies code you&apos;ve ever made. Just for
+                  you to look at it 6 months later and go &quot;why didn&apos;t
+                  I just do it like this instead, that&apos;s so much easier and
+                  more efficient! Typical past me&quot;. The constant progress,
+                  that&apos;s what&apos;s important to me.
+                </p>
+              </>
+            </TextWrapper>
           </div>
-          <div className="flex flex-row justify-between w-[clamp(311px,100%,360px)] self-center md:gap-5">
+          <div className="flex flex-row justify-between w-[clamp(311px,100%,400px)] self-center md:gap-5">
             <div className="flex flex-col justify-center gap-3">
               <TechnologyItem>
                 <>
