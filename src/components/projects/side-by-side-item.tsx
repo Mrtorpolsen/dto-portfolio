@@ -37,7 +37,7 @@ export default function SideBySide({ data, index }: Props) {
           />
         </div>
         <div
-          className={`p-3 relative mt-6 md:self-center sm:mt-0 sm:p-0${
+          className={`relative mt-6 md:self-center sm:mt-0 sm:p-0${
             index % 2 === 0
               ? "col-start-1 row-start-1 sm:ml-4 ml-0"
               : "col-start-2 row-start-1 sm:mr-4 mr-0"
