@@ -47,6 +47,13 @@ export default function Emberfall() {
       text: "Together, these three components form the core of a unit's behaviour:\n\nTarget Component — decides who the unit should engage.\nMovement Component — decides where the unit should move and handles getting there.\nCombat Component — decides when and how the unit attacks.\n\nKeeping these responsibilities separated makes each system easier to reason about and gives me a structure that can evolve as the game's complexity increases.",
       imageSize: "tall",
     },
+    {
+      src: "/images/flowchart-router.png",
+      alt: "Flowchart for the UI Router",
+      heading: "Structuring the UI",
+      text: "Once the basic gameplay was implemented, I started working on the menu. At this point, the menu still contained a lot of placeholder elements, so I wanted to establish a structure that would make it easier to expand and replace them later.\n\nI split the UI into two main parts: a persistent UI root and the content rendered inside it. Some elements, such as the top and navigation bars, remain the same between screens, so they didn't need to be recreated every time the content changed.\n\nThe root also became the place where I handled the phone's safe area. Phones can have different areas at the top and bottom that shouldn't contain UI, such as the notch and camera area on some iPhones. By keeping the safe-area container in the root, the screen content could adapt to different devices without each individual screen having to handle it.\n\nLater, this also became a convenient place to initialize systems such as the popup manager and tutorial overlay. Since these systems are shared across screens, they only need to be initialized once and can then interact with whatever content is currently being displayed.\n\nTo manage the different screens, I built a UI router. Its job is to coordinate the different parts of a screen: the view, events, and, when needed, a controller.\n\nWhen switching screens, the router removes the previous screen and cleans up its events and controller before creating the new one. It then initializes the components in the order:\n\nView → Controller? → Events",
+      imageSize: "tall",
+    },
   ];
 
   return (
@@ -57,7 +64,7 @@ export default function Emberfall() {
         <div>
           <SideBySide data={emberfall[2]} index={2} key={emberfall[2].src} />
           <TextWrapper>
-            <p className="whitespace-pre-line">
+            <p className="whitespace-pre-line mt-5">
               As the number of units on the battlefield increased, another
               problem emerged. Units could physically block units from the same
               faction, which could cause a unit to select a perfectly valid
@@ -100,7 +107,7 @@ export default function Emberfall() {
         <div>
           <SideBySide data={emberfall[3]} index={3} key={emberfall[3].src} />
           <TextWrapper>
-            <p className="whitespace-pre-line">
+            <p className="whitespace-pre-line mt-5">
               The ResolveDestination() method is responsible for this decision.
               It determines whether the unit should move towards a forced
               destination, a ranged rally point, its current combat target, a
@@ -130,6 +137,33 @@ export default function Emberfall() {
         </div>
         <TextBlock {...emberfall[4]} />
         <SideBySide data={emberfall[5]} index={5} key={emberfall[5].src} />
+        <div>
+          <SideBySide data={emberfall[6]} index={6} key={emberfall[6].src} />
+          <TextWrapper>
+            <p className="whitespace-pre-line mt-5">
+              This gives each screen a consistent setup process while allowing
+              screens to only use the components they actually need. The main
+              goal was to keep screen-specific logic separate from the
+              infrastructure required to load, initialize and clean up screens.
+              <br /> <br />
+              While setting up the main menu, I also created a small utility
+              class for working with UI Toolkit. It handles querying elements
+              and binding events, while keeping track of those bindings so they
+              can be cleaned up when the screen is removed.
+              <br /> <br />
+              This removed a lot of repetitive UI setup code from the individual
+              screens and kept the screen-specific classes focused on what they
+              actually needed to do.
+              <br /> <br />
+              The resulting flow is fairly simple: build the UI, register the
+              screen with the router, initialize its components, and use the
+              utility class to query and bind its elements. This gave me a
+              reusable foundation for adding the rest of the screens without
+              having to repeat the same setup and cleanup logic for every
+              screen.
+            </p>
+          </TextWrapper>
+        </div>
       </ul>
     </div>
   );
