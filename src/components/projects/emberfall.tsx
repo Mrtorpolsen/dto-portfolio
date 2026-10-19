@@ -54,6 +54,13 @@ export default function Emberfall() {
       text: "Once the basic gameplay was implemented, I started working on the menu. At this point, the menu still contained a lot of placeholder elements, so I wanted to establish a structure that would make it easier to expand and replace them later.\n\nI split the UI into two main parts: a persistent UI root and the content rendered inside it. Some elements, such as the top and navigation bars, remain the same between screens, so they didn't need to be recreated every time the content changed.\n\nThe root also became the place where I handled the phone's safe area. Phones can have different areas at the top and bottom that shouldn't contain UI, such as the notch and camera area on some iPhones. By keeping the safe-area container in the root, the screen content could adapt to different devices without each individual screen having to handle it.\n\nLater, this also became a convenient place to initialize systems such as the popup manager and tutorial overlay. Since these systems are shared across screens, they only need to be initialized once and can then interact with whatever content is currently being displayed.\n\nTo manage the different screens, I built a UI router. Its job is to coordinate the different parts of a screen: the view, events, and, when needed, a controller.\n\nWhen switching screens, the router removes the previous screen and cleans up its events and controller before creating the new one. It then initializes the components in the order:\n\nView → Controller? → Events",
       imageSize: "tall",
     },
+    {
+      src: "/images/tutorial.png",
+      alt: "Showing the loadout step of the tutoiral, highlighting the players loadout, showing a popup.",
+      heading: "Implementing the tutorial",
+      text: "I'm jumping ahead a bit in the timeline, as my most recent work has been on the tutorial. It needed to cover two distinct environments: the menus and gameplay itself. Since their layouts and interaction requirements differed significantly, I created two separate flow controllers to manage each tutorial.\n\nFor the menus, I created a presenter responsible for positioning popups, highlighting elements, handling interaction overrides, and disabling elements that shouldn't be interacted with. The tutorial follows a predefined path, guiding the player through each step while preventing unintended interactions. Each step is defined by its target element, displayed text, action, and interaction type. This makes the system easy to extend, as adding a new step only requires defining its content.\n\nFor gameplay, I took a less abstract approach. With only a handful of steps, a simpler implementation made more sense. I created an overlay containing dedicated panels for each step, with their own highlights and popups. These panels were mapped to the controller and assigned to their respective steps, without needing the interaction override system used in the menus.\n\nI also created a dedicated tutorial game mode that the menu tutorial launches. It features a tutorial boss that, once defeated, signals the completion of the gameplay tutorial and returns the player to the menu tutorial, allowing them to continue where they left off.\n\nTo handle interruptions, the tutorial resets its step progress when started, ensuring the player follows the intended sequence even if they previously closed it midway. I also track whether the tutorial currency reward has been received and whether the tutorial itself has been completed, preventing the reward from being granted repeatedly and the tutorial from restarting unnecessarily.",
+      imageSize: "tall",
+    },
   ];
 
   return (
@@ -164,6 +171,7 @@ export default function Emberfall() {
             </p>
           </TextWrapper>
         </div>
+        <SideBySide data={emberfall[7]} index={7} key={emberfall[7].src} />
       </ul>
     </div>
   );
